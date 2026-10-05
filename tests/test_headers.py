@@ -30,7 +30,7 @@ class securityHeadersTestCase(unittest.TestCase):
         findings = check_security_headers(headers)
 
         self.assertEqual(len(findings), 5)
-        self.assertnotIn(
+        self.assertNotIn(
             "X-Content-Type-Options",
             [finding["name"] for finding in findings]
             )
